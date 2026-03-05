@@ -3,6 +3,17 @@ import { motion } from "motion/react";
 import { ArrowRight, Sparkles, Phone, Globe, Clock } from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
 
+type FtData = {
+  ajaxUrl: string;
+  nonce: string;
+};
+
+declare global {
+  interface Window {
+    ftData?: FtData;
+  }
+}
+
 const earlyAccessPerkKeys = [
   { icon: Phone, key: "hero.perk1" },
   { icon: Globe, key: "hero.perk2" },
@@ -14,19 +25,36 @@ export function HeroSection() {
   const [submitted, setSubmitted] = useState(false);
   const { tr } = useLanguage();
 
+  const getFtData = async (): Promise<FtData> => {
+    if (window.ftData?.ajaxUrl && window.ftData?.nonce) {
+      return window.ftData;
+    }
+
+    const response = await fetch("https://ftstudios.co/");
+    const html = await response.text();
+    const match = html.match(/var\s+ftData\s*=\s*(\{[^;]+\});/);
+
+    if (!match?.[1]) {
+      throw new Error("Could not find ftData nonce on source page.");
+    }
+
+    const parsed = JSON.parse(match[1]) as FtData;
+    return parsed;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes("@")) return;
     try {
-      const nonce = "8e2b457b6f";
+      const ftData = await getFtData();
       const formData = new FormData();
       formData.append("action", "ft_submit");
-      formData.append("nonce", nonce);
-      formData.append("security", nonce);
-      formData.append("_ajax_nonce", nonce);
+      formData.append("nonce", ftData.nonce);
+      formData.append("security", ftData.nonce);
+      formData.append("_ajax_nonce", ftData.nonce);
       formData.append("email", email);
 
-      const response = await fetch("https://ftstudios.co/wp-admin/admin-ajax.php", {
+      const response = await fetch(ftData.ajaxUrl, {
         method: "POST",
         body: formData,
       });
