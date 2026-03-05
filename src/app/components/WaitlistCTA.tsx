@@ -4,7 +4,7 @@ import { Lock, Bell, Tag, Sparkles, ArrowRight, CheckCircle2 } from "lucide-reac
 import { useLanguage } from "../i18n/LanguageContext";
 
 export function WaitlistCTA() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "" });
+  const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const { tr } = useLanguage();
@@ -18,9 +18,7 @@ export function WaitlistCTA() {
   });
 
   const validate = () => {
-    if (!form.name.trim()) return false;
-    if (!form.email.includes("@") || !form.email.includes(".")) return false;
-    if (form.phone.replace(/\D/g, "").length < 10) return false;
+    if (!email.includes("@") || !email.includes(".")) return false;
     return true;
   };
 
@@ -32,7 +30,7 @@ export function WaitlistCTA() {
     setTimeout(() => {
       try {
         const existing = JSON.parse(localStorage.getItem("ve_waitlist") || "[]");
-        existing.push({ ...form, date: new Date().toISOString() });
+        existing.push({ email, date: new Date().toISOString() });
         localStorage.setItem("ve_waitlist", JSON.stringify(existing));
 
         const newCount = waitlistCount + 1;
@@ -44,6 +42,7 @@ export function WaitlistCTA() {
 
       setSubmitting(false);
       setSubmitted(true);
+      setEmail("");
     }, 1500);
   };
 
@@ -76,8 +75,8 @@ export function WaitlistCTA() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1000px] px-4 sm:px-6">
-        <div className="grid gap-12 lg:grid-cols-[1fr_380px] lg:items-center lg:gap-16">
+      <div className="relative mx-auto max-w-[1140px] px-4 sm:px-6">
+        <div className="grid gap-12 lg:grid-cols-[1fr_500px] lg:items-center lg:gap-20">
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,15 +84,15 @@ export function WaitlistCTA() {
             viewport={{ once: true }}
           >
             <div
-              className="mb-5 inline-flex items-center gap-2 px-3 py-1.5"
+              className="mb-6 inline-flex items-center gap-2.5 px-4 py-2"
               style={{
                 backgroundColor: "rgba(26,142,233,0.12)",
                 border: "1px solid rgba(26,142,233,0.2)",
               }}
             >
-              <Sparkles size={14} color="#1a8ee9" />
+              <Sparkles size={15} color="#1a8ee9" />
               <span
-                className="text-[12px] sm:text-[13px]"
+                className="text-[12px] sm:text-[14px]"
                 style={{ color: "#1a8ee9", fontWeight: 600, letterSpacing: "0.03em" }}
               >
                 LIMITED EARLY ACCESS
@@ -101,14 +100,14 @@ export function WaitlistCTA() {
             </div>
 
             <h2
-              className="mb-4 text-[26px] text-white sm:text-[32px] lg:text-[40px]"
+              className="mb-5 max-w-[620px] text-[30px] text-white sm:text-[38px] lg:text-[48px]"
               style={{ fontWeight: 700, lineHeight: 1.15 }}
             >
               {tr("waitlist.title")}
             </h2>
 
             <p
-              className="mb-8 max-w-[480px] text-[15px] sm:text-[16px]"
+              className="mb-10 max-w-[560px] text-[16px] sm:text-[18px]"
               style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}
             >
               {tr("waitlist.desc")}
@@ -119,15 +118,15 @@ export function WaitlistCTA() {
               {trustItems.map((t) => (
                 <div
                   key={t.text}
-                  className="flex items-center gap-2 px-3 py-2"
+                  className="flex items-center gap-2.5 px-4 py-2.5"
                   style={{
                     backgroundColor: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.08)",
                   }}
                 >
-                  <t.icon size={14} color="#1a8ee9" />
+                  <t.icon size={15} color="#1a8ee9" />
                   <span
-                    className="text-[12px] sm:text-[13px]"
+                    className="text-[13px] sm:text-[14px]"
                     style={{ color: "rgba(255,255,255,0.7)", fontWeight: 500 }}
                   >
                     {t.text}
@@ -145,7 +144,7 @@ export function WaitlistCTA() {
             transition={{ delay: 0.1 }}
           >
             <div
-              className="relative p-6 sm:p-8"
+              className="relative p-7 sm:p-10"
               style={{
                 backgroundColor: "rgba(255,255,255,0.03)",
                 border: "1px solid rgba(255,255,255,0.08)",
@@ -184,54 +183,41 @@ export function WaitlistCTA() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                  <input
-                    type="text"
-                    placeholder={tr("waitlist.name")}
-                    value={form.name}
-                    onChange={(e) =>
-                      setForm((f) => ({ ...f, name: e.target.value }))
-                    }
-                    className="w-full px-4 py-3 text-[14px] text-white placeholder:text-gray-500 focus:outline-none"
-                    style={{
-                      backgroundColor: "rgba(255,255,255,0.05)",
-                      border: "1px solid rgba(255,255,255,0.1)",
-                    }}
-                  />
+                <form
+                  onSubmit={handleSubmit}
+                  className="mx-auto flex w-full max-w-[640px] flex-col gap-3 sm:flex-row sm:gap-4"
+                >
                   <input
                     type="email"
-                    placeholder={tr("waitlist.email")}
-                    value={form.email}
-                    onChange={(e) =>
-                      setForm((f) => ({ ...f, email: e.target.value }))
-                    }
-                    className="w-full px-4 py-3 text-[14px] text-white placeholder:text-gray-500 focus:outline-none"
+                    placeholder={tr("hero.emailPlaceholder")}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full px-5 py-4 text-[16px] outline-none sm:h-[66px] sm:flex-1"
                     style={{
-                      backgroundColor: "rgba(255,255,255,0.05)",
+                      backgroundColor: "rgba(255,255,255,0.06)",
                       border: "1px solid rgba(255,255,255,0.1)",
+                      color: "#ffffff",
                     }}
-                  />
-                  <input
-                    type="tel"
-                    placeholder={tr("waitlist.phone")}
-                    value={form.phone}
-                    onChange={(e) =>
-                      setForm((f) => ({ ...f, phone: e.target.value }))
+                    onFocus={(e) =>
+                      (e.currentTarget.style.borderColor = "rgba(26,142,233,0.5)")
                     }
-                    className="w-full px-4 py-3 text-[14px] text-white placeholder:text-gray-500 focus:outline-none"
-                    style={{
-                      backgroundColor: "rgba(255,255,255,0.05)",
-                      border: "1px solid rgba(255,255,255,0.1)",
-                    }}
+                    onBlur={(e) =>
+                      (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")
+                    }
                   />
                   <button
                     type="submit"
                     disabled={submitting || !validate()}
-                    className="mt-2 flex w-full items-center justify-center gap-2 px-6 py-3.5 text-[15px] text-white transition-all hover:brightness-110 disabled:opacity-50"
-                    style={{
-                      backgroundColor: "#1a8ee9",
-                      fontWeight: 600,
+                    className="group flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap px-5 py-4 text-[15px] text-white transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50 sm:h-[66px] sm:w-auto sm:min-w-[180px]"
+                    style={{ backgroundColor: "#1a8ee9", border: "none" }}
+                    onMouseEnter={(e) => {
+                      if (!submitting && validate()) {
+                        e.currentTarget.style.backgroundColor = "#0b5b9a";
+                      }
                     }}
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.backgroundColor = "#1a8ee9")
+                    }
                   >
                     {submitting ? (
                       tr("waitlist.joining")
