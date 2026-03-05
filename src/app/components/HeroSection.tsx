@@ -18,9 +18,12 @@ export function HeroSection() {
     e.preventDefault();
     if (!email || !email.includes("@")) return;
     try {
+      const nonce = "8e2b457b6f";
       const formData = new FormData();
       formData.append("action", "ft_submit");
-      formData.append("nonce", "8e2b457b6f");
+      formData.append("nonce", nonce);
+      formData.append("security", nonce);
+      formData.append("_ajax_nonce", nonce);
       formData.append("email", email);
 
       const response = await fetch("https://ftstudios.co/wp-admin/admin-ajax.php", {
