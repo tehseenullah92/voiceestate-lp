@@ -8,7 +8,6 @@ import { DashboardPreview } from "./DashboardPreview";
 import { FeaturesGrid } from "./FeaturesGrid";
 import { StatsBar } from "./StatsBar";
 import { Testimonial } from "./Testimonial";
-import { WaitlistCTA } from "./WaitlistCTA";
 import { Footer } from "./Footer";
 import { FooterNew } from "./FooterNew";
 import { WaitlistNotification } from "./WaitlistNotification";
@@ -39,7 +38,6 @@ export function LandingPage() {
         <FeaturesGrid />
         <StatsBar />
         <Testimonial />
-        <WaitlistCTA />
         <Footer />
         <FooterNew />
         <WaitlistNotification />
