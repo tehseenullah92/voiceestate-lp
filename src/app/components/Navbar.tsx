@@ -34,16 +34,25 @@ export function Navbar() {
 
   // Track active section for nav highlight
   useEffect(() => {
-    const sectionIds = ["how-it-works", "features", "dashboard", "testimonials"];
+    const sectionIds = ["hero", "how-it-works", "features", "dashboard", "testimonials"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            // If it's the hero, we want to clear any active state
+            if (entry.target.id === "hero") {
+              setActiveSection("");
+            } else {
+              setActiveSection(entry.target.id);
+            }
           }
         });
       },
-      { threshold: 0.3, rootMargin: "-80px 0px -50% 0px" }
+      {
+        // rootMargin targets the top 20% of the viewport as the "active" zone
+        rootMargin: "-80px 0px -80% 0px",
+        threshold: 0
+      }
     );
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
@@ -62,14 +71,11 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const scrollToWaitlist = () => {
-    document.getElementById("waitlist-cta")?.scrollIntoView({ behavior: "smooth" });
-    setMobileOpen(false);
-  };
 
   const scrollToSection = (href: string) => {
     const id = href.replace("#", "");
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setActiveSection(id); // Immediate feedback
     setMobileOpen(false);
   };
 
@@ -107,7 +113,10 @@ export function Navbar() {
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3.5 sm:px-6">
         {/* Brand */}
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setActiveSection("");
+          }}
           className="flex cursor-pointer items-center gap-2.5"
           style={{ border: "none", background: "none", padding: 0 }}
         >
@@ -290,24 +299,6 @@ export function Navbar() {
             )}
           </div>
 
-          {/* Join Waitlist Button */}
-          <button
-            onClick={scrollToWaitlist}
-            className="cursor-pointer px-4 py-2 text-[13px] text-white transition-all duration-200 hover:scale-[1.02] sm:px-5 sm:py-2.5 sm:text-[14px]"
-            style={{
-              backgroundColor: accentColor,
-              border: "none",
-              fontWeight: 600,
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = "#0b5b9a")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = accentColor)
-            }
-          >
-            {tr("nav.cta")}
-          </button>
 
           {/* Mobile menu toggle */}
           <button
@@ -351,8 +342,8 @@ export function Navbar() {
                     color: isActive
                       ? accentColor
                       : scrolled
-                      ? "#0f172a"
-                      : "rgba(255,255,255,0.7)",
+                        ? "#0f172a"
+                        : "rgba(255,255,255,0.7)",
                     fontWeight: isActive ? 600 : 500,
                     border: "none",
                     background: "none",
@@ -372,17 +363,6 @@ export function Navbar() {
               );
             })}
           </div>
-          <button
-            onClick={scrollToWaitlist}
-            className="mt-4 w-full cursor-pointer py-3 text-[15px] text-white transition-all duration-200"
-            style={{
-              backgroundColor: accentColor,
-              border: "none",
-              fontWeight: 600,
-            }}
-          >
-            {tr("nav.cta")}
-          </button>
         </div>
       )}
     </nav>
