@@ -7,8 +7,8 @@ import { motion } from "motion/react";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const testimonialKeys = [1, 2, 3, 4];
-const metrics = ["63", "40%", "300+", "3"];
-const metricLabels = ["Leads in 1 Day", "Conversion Boost", "Calls Before Lunch", "Languages at Once"];
+const metrics = ["142", "8", "100%", "9x"];
+const metricLabels = ["Leads Re-engaged", "Site Visits Booked", "ROI Increase", "Faster Lead Qual"];
 
 export function Testimonial() {
   const sliderRef = useRef<Slider>(null);
@@ -81,16 +81,16 @@ export function Testimonial() {
                       <Quote size={24} color="#1a8ee9" />
                     </div>
 
-                    {/* Stars */}
-                    <div className="mb-5 flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={18}
-                          fill="#f59e0b"
-                          color="#f59e0b"
-                        />
-                      ))}
+                    {/* Beta Verified Tag */}
+                    <div className="mb-5 flex items-center gap-1.5 w-fit rounded-full px-2.5 py-1" style={{ backgroundColor: "rgba(16, 185, 129, 0.1)" }}>
+                      <div className="flex items-center justify-center w-4 h-4 rounded-full" style={{ backgroundColor: "#10b981" }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      <span className="text-[12px] font-semibold tracking-wide uppercase" style={{ color: "#059669" }}>
+                        Verified Beta User
+                      </span>
                     </div>
 
                     {/* Quote text */}
@@ -118,7 +118,7 @@ export function Testimonial() {
                       </div>
                       <div>
                         <p
-                          className="text-[15px]"
+                          className="text-[15px] flex items-center gap-1.5"
                           style={{ fontWeight: 600, color: "#0f172a" }}
                         >
                           {tr(`testimonial.${num}.name`)}

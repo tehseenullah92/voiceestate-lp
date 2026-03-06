@@ -7,7 +7,6 @@ const sectionLinkKeys = [
   { key: "nav.dashboard", id: "dashboard" },
   { key: "nav.features", id: "features" },
   { key: "nav.testimonials", id: "testimonials" },
-  { key: "waitlist.cta", id: "waitlist-cta" },
 ];
 
 export function FooterNew() {
