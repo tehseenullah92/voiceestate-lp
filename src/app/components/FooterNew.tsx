@@ -107,7 +107,7 @@ export function FooterNew() {
         </div>
 
         {/* Main grid */}
-        <div className="mb-16 grid gap-12 sm:mb-20 md:grid-cols-[1.6fr_1fr_1fr] lg:gap-16">
+        <div className="mb-16 grid gap-12 sm:mb-20 md:grid-cols-[2fr_1fr] lg:justify-between lg:gap-16">
           {/* CTA column */}
           <div>
             <h3
@@ -177,100 +177,6 @@ export function FooterNew() {
             </ul>
           </div>
 
-          {/* Contact column */}
-          <div>
-            <h4
-              className="mb-5 text-[11px]"
-              style={{
-                color: "#1a8ee9",
-                fontWeight: 600,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-              }}
-            >
-              {tr("footer.getInTouch")}
-            </h4>
-            <div className="flex flex-col gap-2.5">
-              <a
-                href="mailto:hello@convaire.com"
-                className="flex items-center gap-3 px-4 py-3 transition-all duration-200"
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.02)",
-                  border: "1px solid rgba(255,255,255,0.05)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(26,142,233,0.2)";
-                  e.currentTarget.style.backgroundColor = "rgba(26,142,233,0.04)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)";
-                  e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.02)";
-                }}
-              >
-                <div
-                  className="flex h-8 w-8 shrink-0 items-center justify-center"
-                  style={{ backgroundColor: "rgba(26,142,233,0.1)" }}
-                >
-                  <Mail size={13} color="#1a8ee9" />
-                </div>
-                <span
-                  className="text-[13px]"
-                  style={{ color: "rgba(255,255,255,0.55)" }}
-                >
-                  hello@convaire.com
-                </span>
-              </a>
-              <a
-                href="tel:+923001234567"
-                className="flex items-center gap-3 px-4 py-3 transition-all duration-200"
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.02)",
-                  border: "1px solid rgba(255,255,255,0.05)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(26,142,233,0.2)";
-                  e.currentTarget.style.backgroundColor = "rgba(26,142,233,0.04)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)";
-                  e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.02)";
-                }}
-              >
-                <div
-                  className="flex h-8 w-8 shrink-0 items-center justify-center"
-                  style={{ backgroundColor: "rgba(26,142,233,0.1)" }}
-                >
-                  <Phone size={13} color="#1a8ee9" />
-                </div>
-                <span
-                  className="text-[13px]"
-                  style={{ color: "rgba(255,255,255,0.55)" }}
-                >
-                  +92 300 123 4567
-                </span>
-              </a>
-              <div
-                className="flex items-center gap-3 px-4 py-3"
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.02)",
-                  border: "1px solid rgba(255,255,255,0.05)",
-                }}
-              >
-                <div
-                  className="flex h-8 w-8 shrink-0 items-center justify-center"
-                  style={{ backgroundColor: "rgba(26,142,233,0.1)" }}
-                >
-                  <MapPin size={13} color="#1a8ee9" />
-                </div>
-                <span
-                  className="text-[13px]"
-                  style={{ color: "rgba(255,255,255,0.55)" }}
-                >
-                  {tr("footer.location")}
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
