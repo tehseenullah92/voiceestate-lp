@@ -5,7 +5,7 @@ Good. Now I can match the landing page to your actual brand. Let me update the p
 ## Updated Landing Page Cursor Prompt
 
 ```
-Build a stunning, production-grade landing page for "VoiceEstate" — an AI-powered outbound voice calling platform for real estate businesses. The page has one primary goal: get real estate businesses to join a waiting list.
+Build a stunning, production-grade landing page for "Convaire" — an AI-powered outbound voice calling platform for real estate businesses. The page has one primary goal: get real estate businesses to join a waiting list.
 
 Match the exact brand identity of the platform shown in the design reference.
 
@@ -13,7 +13,7 @@ Match the exact brand identity of the platform shown in the design reference.
 
 ## BRAND IDENTITY (match exactly)
 
-Logo: Blue square icon with "VoiceEstate" wordmark + "AI Calling Platform" tagline below in small text — same as sidebar
+Logo: Blue square icon with "Convaire" wordmark + "AI Calling Platform" tagline below in small text — same as sidebar
 
 Typography:
 - UI font: Same clean sans-serif used in the dashboard (use "Inter" from Google Fonts)
@@ -41,7 +41,7 @@ Style: Clean, light, professional SaaS. White/light gray backgrounds with blue a
 ## PAGE SECTIONS
 
 ### 1. NAVBAR
-- Left: Blue square logo icon + "VoiceEstate" bold + "AI Calling Platform" subtitle in muted text (exact match to sidebar logo)
+- Left: Blue square logo icon + "Convaire" bold + "AI Calling Platform" subtitle in muted text (exact match to sidebar logo)
 - Right: "Join Waitlist" button (#1a8ee9 filled, white text, rounded)
 - White background, bottom border #e2e8f0
 - Sticky with subtle box-shadow on scroll
@@ -57,7 +57,7 @@ Left side (55%):
   Clients For You"
 - Subheadline (muted, 18px):
   "Upload your client list, create a campaign, and let Zara — your AI voice agent — call, pitch projects, handle objections, and book site visits. In Urdu and English."
-- Inline waitlist form: email input (white, border #e2e8f0) + "Get Early Access" button (#1a8ee9)
+- Inline waitlist form: email input (white, border #e2e8f0) + "Join Waiting List" button (#1a8ee9)
 - Below form: row of 5 avatar initials circles (blue tones) + "200+ businesses on the waitlist"
 
 Right side (45%):
@@ -155,7 +155,7 @@ Dark navy (#0f172a) background, white text.
 - Logo left (white version)
 - Tagline: "AI voice campaigns for real estate businesses."
 - Links: Privacy Policy, Terms of Service (placeholder)
-- Copyright: "© 2025 VoiceEstate. All rights reserved."
+- Copyright: "© 2026 Convaire. All rights reserved."
 - Social: LinkedIn + Instagram icons, white, hover turns #1a8ee9
 
 ---

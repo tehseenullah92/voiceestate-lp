@@ -149,7 +149,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mb-5 max-w-[820px] text-[32px] sm:mb-6 sm:text-[44px] md:text-[52px] lg:text-[64px]"
-            style={{ fontWeight: 800, color: "#ffffff", lineHeight: 1.08 }}
+            style={{ fontWeight: 600, color: "#ffffff", lineHeight: 1.08 }}
           >
             {tr("hero.title")}
           </motion.h1>

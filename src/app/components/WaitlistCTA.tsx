@@ -101,7 +101,7 @@ export function WaitlistCTA() {
 
             <h2
               className="mb-5 max-w-[620px] text-[30px] text-white sm:text-[38px] lg:text-[48px]"
-              style={{ fontWeight: 700, lineHeight: 1.15 }}
+              style={{ fontWeight: 600, lineHeight: 1.15 }}
             >
               {tr("waitlist.title")}
             </h2>

@@ -15,10 +15,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.voiceestate-lp.vercel.app"
+          "value": "www.convaire-lp.vercel.app"
         }
       ],
-      "destination": "https://voiceestate-lp.vercel.app/:path",
+      "destination": "https://convaire-lp.vercel.app/:path",
       "permanent": true
     }
   ],

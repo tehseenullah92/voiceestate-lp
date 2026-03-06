@@ -110,7 +110,7 @@ export function FeaturesGrid() {
               </div>
               <h2
                 className="max-w-[520px] text-[26px] sm:text-[32px] lg:text-[42px]"
-                style={{ fontWeight: 700, color: "#0f172a", lineHeight: 1.15 }}
+                style={{ fontWeight: 600, color: "#0f172a", lineHeight: 1.15 }}
               >
                 {tr("features.title")}
               </h2>
@@ -182,7 +182,7 @@ export function FeaturesGrid() {
               {/* Content */}
               <h3
                 className="mb-2 text-[17px]"
-                style={{ fontWeight: 700, color: "#0f172a" }}
+                style={{ fontWeight: 600, color: "#0f172a" }}
               >
                 {tr(`features.${i + 1}.title`)}
               </h3>

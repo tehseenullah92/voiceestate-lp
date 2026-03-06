@@ -59,7 +59,7 @@ export function Testimonial() {
           </span>
           <h2
             className="text-[24px] sm:text-[32px] lg:text-[40px]"
-            style={{ fontWeight: 700, lineHeight: 1.2, color: "#0f172a" }}
+            style={{ fontWeight: 600, lineHeight: 1.2, color: "#0f172a" }}
           >
             {tr("testimonial.title")}
           </h2>
@@ -111,7 +111,7 @@ export function Testimonial() {
                         className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-[15px] text-white"
                         style={{
                           background: "linear-gradient(135deg, #1a8ee9, #0b5b9a)",
-                          fontWeight: 700,
+                          fontWeight: 600,
                         }}
                       >
                         {tr(`testimonial.${num}.name`).split(" ").map(w => w[0]).join("").slice(0, 2)}
@@ -150,7 +150,7 @@ export function Testimonial() {
                       <p
                         className="mb-2 text-[48px] sm:text-[56px]"
                         style={{
-                          fontWeight: 800,
+                          fontWeight: 600,
                           color: "#1a8ee9",
                           lineHeight: 1,
                         }}

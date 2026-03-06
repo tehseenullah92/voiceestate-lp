@@ -142,7 +142,7 @@ export function WaitlistNotification() {
         <div>
           <p
             className="text-[15px] text-white"
-            style={{ fontWeight: 700, lineHeight: 1.2 }}
+            style={{ fontWeight: 600, lineHeight: 1.2 }}
           >
             {waitlistCount}+
           </p>
@@ -175,7 +175,7 @@ export function WaitlistNotification() {
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[12px] text-white"
               style={{
                 backgroundColor: "#1a8ee9",
-                fontWeight: 700,
+                fontWeight: 600,
               }}
             >
               {notification.name.charAt(0)}

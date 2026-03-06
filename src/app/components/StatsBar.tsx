@@ -139,7 +139,7 @@ export function StatsBar() {
         >
           <h2
             className="mb-3 text-[24px] text-white sm:text-[30px] lg:text-[38px]"
-            style={{ fontWeight: 700, lineHeight: 1.15 }}
+            style={{ fontWeight: 600, lineHeight: 1.15 }}
           >
             {tr("stats.title")}
           </h2>
@@ -193,7 +193,7 @@ export function StatsBar() {
               {/* Value */}
               <p
                 className="mb-1 text-[32px] sm:text-[38px] lg:text-[44px]"
-                style={{ fontWeight: 800, lineHeight: 1, color: "#1a8ee9" }}
+                style={{ fontWeight: 600, lineHeight: 1, color: "#1a8ee9" }}
               >
                 <CountUpStat
                   target={s.value}

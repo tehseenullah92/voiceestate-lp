@@ -141,13 +141,13 @@ export function Navbar() {
               <path d={svgPaths.p1dda6500} fill={accentColor} opacity="0.3" />
             </svg>
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 text-left">
             <span
               className="text-[16px] transition-colors duration-300 sm:text-[17px]"
-              style={{ fontWeight: 700, color: brandColor }}
+              style={{ fontWeight: 600, color: brandColor }}
             >
-              Voice
-              <span style={{ color: accentColor }}>Estate</span>
+              Con
+              <span style={{ color: accentColor }}>vaire</span>
             </span>
             <p
               className="hidden text-[10px] sm:block"

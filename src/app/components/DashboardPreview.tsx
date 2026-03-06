@@ -111,7 +111,7 @@ export function DashboardPreview() {
           </div>
           <h2
             className="mx-auto mb-4 max-w-[560px] text-[26px] sm:text-[32px] lg:text-[42px]"
-            style={{ fontWeight: 700, color: "#0f172a", lineHeight: 1.15 }}
+            style={{ fontWeight: 600, color: "#0f172a", lineHeight: 1.15 }}
           >
             {tr("dash.title")}
           </h2>
@@ -165,7 +165,7 @@ export function DashboardPreview() {
                 color: "#64748b",
               }}
             >
-              app.voiceestate.com/dashboard
+              app.convaire.com/dashboard
             </div>
           </div>
 
@@ -202,9 +202,9 @@ export function DashboardPreview() {
                 <div>
                   <p
                     className="text-[13px] text-white"
-                    style={{ fontWeight: 700 }}
+                    style={{ fontWeight: 600 }}
                   >
-                    VoiceEstate
+                    Convaire
                   </p>
                   <p
                     className="text-[9px]"
@@ -306,7 +306,7 @@ export function DashboardPreview() {
                     </div>
                     <p
                       className="text-[20px]"
-                      style={{ fontWeight: 700, color: s.color }}
+                      style={{ fontWeight: 600, color: s.color }}
                     >
                       {s.val}
                     </p>
@@ -447,7 +447,7 @@ export function DashboardPreview() {
                         className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[8px] text-white"
                         style={{
                           backgroundColor: "#1a8ee9",
-                          fontWeight: 700,
+                          fontWeight: 600,
                         }}
                       >
                         {lead.name
@@ -477,7 +477,7 @@ export function DashboardPreview() {
                           className="shrink-0 text-[8px]"
                           style={{
                             color: "#f59e0b",
-                            fontWeight: 700,
+                            fontWeight: 600,
                           }}
                         >
                           HOT
@@ -521,7 +521,7 @@ export function DashboardPreview() {
               <div>
                 <h4
                   className="mb-1 text-[15px]"
-                  style={{ fontWeight: 700, color: "#0f172a" }}
+                  style={{ fontWeight: 600, color: "#0f172a" }}
                 >
                   {h.title}
                 </h4>

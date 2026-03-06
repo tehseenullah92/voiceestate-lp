@@ -110,7 +110,7 @@ export function HowItWorks() {
           </div>
           <h2
             className="mx-auto max-w-[560px] text-[26px] sm:text-[32px] lg:text-[42px]"
-            style={{ fontWeight: 700, color: "#0f172a", lineHeight: 1.15 }}
+            style={{ fontWeight: 600, color: "#0f172a", lineHeight: 1.15 }}
           >
             {tr("how.title")}
           </h2>
@@ -144,7 +144,7 @@ export function HowItWorks() {
                         className="flex h-12 w-12 items-center justify-center text-[16px] text-white"
                         style={{
                           backgroundColor: "#1a8ee9",
-                          fontWeight: 800,
+                          fontWeight: 600,
                         }}
                       >
                         {step.num}
@@ -164,7 +164,7 @@ export function HowItWorks() {
                       <h3
                         className="mb-2 text-[20px] sm:text-[24px]"
                         style={{
-                          fontWeight: 700,
+                          fontWeight: 600,
                           color: "#0f172a",
                           lineHeight: 1.2,
                         }}
@@ -310,7 +310,7 @@ export function HowItWorks() {
                                 className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[9px] text-white"
                                 style={{
                                   backgroundColor: "#1a8ee9",
-                                  fontWeight: 700,
+                                  fontWeight: 600,
                                 }}
                               >
                                 {row.name
@@ -370,7 +370,7 @@ export function HowItWorks() {
                               style={{
                                 backgroundColor: "rgba(34,197,94,0.1)",
                                 color: "#22c55e",
-                                fontWeight: 700,
+                                fontWeight: 600,
                               }}
                             >
                               {step.preview.status}
@@ -490,7 +490,7 @@ export function HowItWorks() {
                               className="text-[24px]"
                               style={{
                                 color: "#1a8ee9",
-                                fontWeight: 800,
+                                fontWeight: 600,
                                 lineHeight: 1,
                               }}
                             >
@@ -511,7 +511,7 @@ export function HowItWorks() {
                               className="text-[24px]"
                               style={{
                                 color: "#0b5b9a",
-                                fontWeight: 800,
+                                fontWeight: 600,
                                 lineHeight: 1,
                               }}
                             >
@@ -532,7 +532,7 @@ export function HowItWorks() {
                               className="text-[24px]"
                               style={{
                                 color: "#22c55e",
-                                fontWeight: 800,
+                                fontWeight: 600,
                                 lineHeight: 1,
                               }}
                             >

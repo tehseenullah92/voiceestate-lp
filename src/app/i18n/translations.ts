@@ -9,7 +9,7 @@ export const langConfig: Record<Lang, { label: string; dir: "ltr" | "rtl"; font:
 export const t: Record<Lang, Record<string, string>> = {
   en: {
     // Navbar
-    "nav.brand": "VoiceEstate",
+    "nav.brand": "Convaire",
     "nav.tagline": "AI Calling Platform",
     "nav.cta": "Join waitlist",
     "nav.howItWorks": "How it works",
@@ -22,7 +22,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "hero.title": "The AI that calls your real estate clients for you",
     "hero.desc": "Upload your client list, create a campaign, and let Zara, your AI voice agent, call, pitch projects, handle objections, and book site visits. In Urdu, English, and Arabic.",
     "hero.emailPlaceholder": "Enter your work email",
-    "hero.cta": "Get early access",
+    "hero.cta": "Join waiting list",
     "hero.submitted": "You're on the list! We'll reach out soon.",
     "hero.waitlistCount": "businesses on the waitlist",
     "hero.totalClients": "Total clients",
@@ -133,12 +133,12 @@ export const t: Record<Lang, Record<string, string>> = {
     "footer.desc": "AI voice campaigns for real estate businesses.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
-    "footer.copyright": "© 2026 VoiceEstate. All rights reserved.",
+    "footer.copyright": "© 2026 Convaire. All rights reserved.",
   },
 
   ar: {
     // Navbar
-    "nav.brand": "VoiceEstate",
+    "nav.brand": "Convaire",
     "nav.tagline": "منصة الاتصال بالذكاء الاصطناعي",
     "nav.cta": "انضم لقائمة الانتظار",
     "nav.howItWorks": "كيف يعمل",
@@ -262,12 +262,12 @@ export const t: Record<Lang, Record<string, string>> = {
     "footer.desc": "حملات صوتية بالذكاء الاصطناعي للشركات العقارية.",
     "footer.privacy": "سياسة الخصوصية",
     "footer.terms": "شروط الخدمة",
-    "footer.copyright": "© ٢٠٢٦ VoiceEstate. جميع الحقوق محفوظة.",
+    "footer.copyright": "© ٢٠٢٦ Convaire. جميع الحقوق محفوظة.",
   },
 
   ur: {
     // Navbar
-    "nav.brand": "VoiceEstate",
+    "nav.brand": "Convaire",
     "nav.tagline": "AI کالنگ پلیٹ فارم",
     "nav.cta": "ویٹنگ لسٹ میں شامل ہوں",
     "nav.howItWorks": "یہ کیسے کام کرتا ہے",
@@ -391,6 +391,6 @@ export const t: Record<Lang, Record<string, string>> = {
     "footer.desc": "رئیل اسٹیٹ کاروبار کے لیے AI وائس مہمات۔",
     "footer.privacy": "پرائیویسی پالیسی",
     "footer.terms": "سروس کی شرائط",
-    "footer.copyright": "© 2026 VoiceEstate۔ جملہ حقوق محفوظ ہیں۔",
+    "footer.copyright": "© 2026 Convaire۔ جملہ حقوق محفوظ ہیں۔",
   },
 };

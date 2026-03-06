@@ -40,9 +40,9 @@ export function Footer() {
             <div className="mb-4">
               <span
                 className="text-[20px] text-white"
-                style={{ fontWeight: 700 }}
+                style={{ fontWeight: 600 }}
               >
-                VoiceEstate
+                Convaire
               </span>
               <div
                 className="mt-1 h-[2px] w-8"
@@ -60,7 +60,7 @@ export function Footer() {
             {/* Contact info */}
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:hello@voiceestate.com"
+                href="mailto:hello@convaire.com"
                 className="flex items-center gap-2 text-[13px] transition-colors duration-200"
                 style={{ color: "rgba(255,255,255,0.45)" }}
                 onMouseEnter={(e) =>
@@ -71,7 +71,7 @@ export function Footer() {
                 }
               >
                 <Mail size={14} />
-                hello@voiceestate.com
+                hello@convaire.com
               </a>
               <a
                 href="tel:+923001234567"
@@ -229,7 +229,7 @@ export function Footer() {
       >
         <div className="flex flex-col items-center justify-between gap-3 py-6 sm:flex-row">
           <p className="text-[12px]" style={{ color: "rgba(255,255,255,0.3)" }}>
-            &copy; 2026 VoiceEstate. All rights reserved.
+            &copy; 2026 Convaire. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5">
             <span

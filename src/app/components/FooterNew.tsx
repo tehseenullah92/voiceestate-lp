@@ -69,10 +69,10 @@ export function FooterNew() {
               <div>
                 <span
                   className="text-[22px] text-white"
-                  style={{ fontWeight: 700 }}
+                  style={{ fontWeight: 600 }}
                 >
-                  Voice
-                  <span style={{ color: "#1a8ee9" }}>Estate</span>
+                  Con
+                  <span style={{ color: "#1a8ee9" }}>vaire</span>
                 </span>
                 <p
                   className="text-[11px]"
@@ -113,7 +113,7 @@ export function FooterNew() {
           <div>
             <h3
               className="mb-5 text-[20px] text-white sm:text-[24px] lg:text-[28px]"
-              style={{ fontWeight: 700, lineHeight: 1.25 }}
+              style={{ fontWeight: 600, lineHeight: 1.25 }}
             >
               {tr("footer.heading").split("\n").map((line, i) => (
                 <span key={i}>
@@ -193,7 +193,7 @@ export function FooterNew() {
             </h4>
             <div className="flex flex-col gap-2.5">
               <a
-                href="mailto:hello@voiceestate.com"
+                href="mailto:hello@convaire.com"
                 className="flex items-center gap-3 px-4 py-3 transition-all duration-200"
                 style={{
                   backgroundColor: "rgba(255,255,255,0.02)",
@@ -218,7 +218,7 @@ export function FooterNew() {
                   className="text-[13px]"
                   style={{ color: "rgba(255,255,255,0.55)" }}
                 >
-                  hello@voiceestate.com
+                  hello@convaire.com
                 </span>
               </a>
               <a
@@ -281,23 +281,23 @@ export function FooterNew() {
         style={{ height: "clamp(90px, 16vw, 200px)" }}
       >
         <p
-          className="absolute bottom-0 left-1/2 w-max -translate-x-1/2 translate-y-[22%] text-center"
+          className="absolute bottom-0 left-0 w-full text-left translate-y-[15%] pl-6 sm:pl-8"
           style={{
-            fontSize: "clamp(70px, 14vw, 220px)",
+            fontSize: "clamp(32px, 16vw, 270px)",
             fontWeight: 900,
             backgroundImage:
-              "linear-gradient(180deg, rgba(26,142,233,0.1) 0%, rgba(56,189,248,0.02) 100%)",
+              "linear-gradient(180deg, rgba(26,142,233,0.12) 0%, rgba(56,189,248,0.02) 100%)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             color: "transparent",
             lineHeight: 1,
-            letterSpacing: "0.06em",
+            letterSpacing: "0.12em",
             textTransform: "uppercase",
             whiteSpace: "nowrap",
             userSelect: "none",
           }}
         >
-          VOICEESTATE
+          CONVAIRE
         </p>
       </div>
 
@@ -306,7 +306,7 @@ export function FooterNew() {
         className="mx-auto max-w-[1200px] px-6 sm:px-8"
         style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
       >
-        <div className="flex flex-col items-center justify-between gap-4 py-6 sm:flex-row">
+        <div className="flex flex-col items-start justify-between gap-4 py-6 sm:flex-row sm:items-center">
           <p
             className="text-[12px]"
             style={{ color: "rgba(255,255,255,0.2)" }}
